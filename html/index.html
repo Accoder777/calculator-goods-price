@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFO & AVECO Website</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="page1">
+            <h1>Mahsulotlarni kiritish</h1>
+            <form id="productForm">
+                <label for="productName">Mahsulot nomi:</label><br>
+                <input type="text" id="productName" required><br><br>
+
+                <label for="productQuantity">Mahsulot soni:</label><br>
+                <input type="number" id="productQuantity" min="1" required><br><br>
+
+                <label for="productPrice">Mahsulot narxi:</label><br>
+                <input type="number" id="productPrice" step="0.01" min="0" required><br><br>
+
+                <button type="button" onclick="addProduct()">Mahsulotni qo'shish</button>
+            </form>
+            <h2>Kiritilgan mahsulotlar:</h2>
+            <ul id="productList"></ul>
+            <button onclick="goToPage2()">Davom etish</button>
+        </div>
+
+        <div id="page2" class="hidden">
+            <h1>FIFO yoki AVECO usulini tanlang</h1>
+            <label for="method">Hisoblash usuli:</label><br>
+            <select id="method">
+                <option value="FIFO">FIFO</option>
+                <option value="AVECO">AVECO</option>
+            </select><br><br>
+
+            <label for="neededProduct">Qaysi mahsulot kerak:</label><br>
+            <input type="text" id="neededProduct" required><br><br>
+
+            <label for="neededQuantity">Kerakli miqdor:</label><br>
+            <input type="number" id="neededQuantity" min="1" required><br><br>
+
+            <button onclick="calculateTotal()">Hisoblash</button>
+
+            <h2>Natija:</h2>
+            <p id="result"></p>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>
