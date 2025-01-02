@@ -6,7 +6,14 @@ const products = [];
             const price = parseFloat(document.getElementById('productPrice').value);
 
             if (name && quantity > 0 && price >= 0) {
-                products.push({ name, quantity, price });
+                products.push(
+                        { 
+                        name, 
+                        quantity, 
+                        price 
+                    }
+                );
+                console.log(products)
                 updateProductList();
                 document.getElementById('productForm').reset();
             } else {

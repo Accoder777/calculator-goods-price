@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FIFO & AVECO Website</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <div class="container">
         <div id="page1">
-            <h1>Mahsulotlarni kiritish</h1>
+            <h1 class="title">Mahsulotlarni kiritish</h1>
             <form id="productForm">
                 <label for="productName">Mahsulot nomi:</label><br>
                 <input type="text" id="productName" required><br><br>
@@ -23,13 +24,13 @@
 
                 <button type="button" onclick="addProduct()">Mahsulotni qo'shish</button>
             </form>
-            <h2>Kiritilgan mahsulotlar:</h2>
+            <h2 class="all-materials">Kiritilgan mahsulotlar:</h2>
             <ul id="productList"></ul>
             <button onclick="goToPage2()">Davom etish</button>
         </div>
 
         <div id="page2" class="hidden">
-            <h1>FIFO yoki AVECO usulini tanlang</h1>
+            <h1 class="title">FIFO yoki AVECO usulini tanlang</h1>
             <label for="method">Hisoblash usuli:</label><br>
             <select id="method">
                 <option value="FIFO">FIFO</option>
