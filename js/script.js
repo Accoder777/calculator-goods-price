@@ -66,3 +66,4 @@ const products = [];
 
             document.getElementById('result').textContent = `Jami summa: ${total.toFixed(2)} so'm`;
         }
+        
